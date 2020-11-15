@@ -1,0 +1,41 @@
+{
+  "name": "fullstack-javascript-learning",
+  "version": "1.0.0",
+  "description": "Making an application with React, Node js and Mango DB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js --ignore public",
+    "dev": "webpack -wd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharkmaster46/fullstack-javascript-learning.git"
+  },
+  "author": "Sharukh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharkmaster46/fullstack-javascript-learning/issues"
+  },
+  "homepage": "https://github.com/sharkmaster46/fullstack-javascript-learning#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mangodb": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/node": "7.x",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.1",
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
+    "nodemon": "^2.0.6",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
