@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sharkmaster46/fullstack-javascript-learning#readme",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mangodb": "^1.0.0",
     "prop-types": "^15.7.2",
