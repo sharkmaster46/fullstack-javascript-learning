@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/sharkmaster46/fullstack-javascript-learning#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "json-loader": "^0.5.7",
     "mangodb": "^1.0.0",
+    "node-sass-middleware": "^0.11.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
