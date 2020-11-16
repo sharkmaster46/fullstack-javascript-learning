@@ -2,7 +2,8 @@ import config from './config';
 import express from 'express';
 import apiRouter from './api';
 import sassMiddleware from 'node-sass-middleware';
-import path from 'path'
+import path from 'path';
+import serverRender from './serverRender';
 
 const server = express();
 
@@ -12,14 +13,19 @@ server.use(sassMiddleware({
 }));
 
 server.set('view engine', 'ejs');
-server.listen(config.port, () => {
+server.listen(config.port, config.host, () => {
     console.log(`Express listening on port ${config.port}`);
 });
 
 server.get('/', (req, res) =>{
-    res.render('index', {
-        content: "Hello Express and <em>EJS!</em>"
-    });
+    serverRender()
+    .then(({initialMarkUp, initialData}) => {
+        res.render('index', {
+            initialMarkUp,
+            initialData
+        });
+    })
+    .catch(console.error);
 });
 server.use(express.static('public'));
 server.use('/api', apiRouter);
